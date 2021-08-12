@@ -29,7 +29,7 @@ class CustomerGenericAPIView(mixins.ListModelMixin,generics.GenericAPIView, mixi
 class BranchDataGenericAPIView(mixins.ListModelMixin,generics.GenericAPIView, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.RetrieveModelMixin, mixins.DestroyModelMixin):
     serializer_class= BranchDataSerializer
     queryset=BranchData.objects.all()
-    authentication_classes=[TokenAuthentication]
+    authentication_classes=[BasicAuthentication]
     permission_classes=[IsAuthenticated]
     def get(self, request):
         return self.list(request)
@@ -40,7 +40,7 @@ class BranchDataGenericAPIView(mixins.ListModelMixin,generics.GenericAPIView, mi
 class LoanAmountDataGenericAPIView(mixins.ListModelMixin,generics.GenericAPIView, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.RetrieveModelMixin, mixins.DestroyModelMixin):
     serializer_class= LoanAmountDataSerializer
     queryset=LoanAmountData.objects.all()
-    authentication_classes=[TokenAuthentication]
+    authentication_classes=[BasicAuthentication]
     permission_classes=[IsAuthenticated]
     def get(self, request):
         return self.list(request)
@@ -50,7 +50,7 @@ class LoanAmountDataGenericAPIView(mixins.ListModelMixin,generics.GenericAPIView
 class CustomerHomeAddressDataGenericAPIView(mixins.ListModelMixin,generics.GenericAPIView, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.RetrieveModelMixin, mixins.DestroyModelMixin):
     serializer_class= CustomerHomeAddressDataSerializer
     queryset=CustomerHomeAddressData.objects.all()
-    authentication_classes=[TokenAuthentication]
+    authentication_classes=[BasicAuthentication]
     permission_classes=[IsAuthenticated]
     def get(self, request):
         return self.list(request)
@@ -61,7 +61,7 @@ class CustomerHomeAddressDataGenericAPIView(mixins.ListModelMixin,generics.Gener
 class CustomerOfficeDataGenericAPIView(mixins.ListModelMixin,generics.GenericAPIView, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.RetrieveModelMixin, mixins.DestroyModelMixin):
     serializer_class= CustomerOfficeDataSerializer
     queryset=CustomerOfficeData.objects.all()
-    authentication_classes=[TokenAuthentication]
+    authentication_classes=[BasicAuthentication]
     permission_classes=[IsAuthenticated]
     def get(self, request):
         return self.list(request)
