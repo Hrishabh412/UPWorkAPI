@@ -1,5 +1,5 @@
 # UPWorkAPI
-Code is on Dev Branch https://github.com/Hrishabh412/UPWorkAPI/tree/dev
+Code is in Dev Branch https://github.com/Hrishabh412/UPWorkAPI/tree/dev
 This is an API to retrive multiple table data which are connected through primary and foreign keys.
 There are five tables.
 To access each table data we need to use different user with slitly changing it.
