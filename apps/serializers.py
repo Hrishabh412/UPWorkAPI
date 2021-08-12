@@ -6,19 +6,20 @@ from .models import Customer,BranchData,CustomerHomeAddressData,LoanAmountData, 
 
 
 class CustomerSerializer(serializers.ModelSerializer):
-    class Meta:
+    class Meta():
         model = Customer
         #fields = ['id','firstname', 'lastname', 'email', 'age', 'dateofbirth', 'mobileno']
         fields='__all__'
+        
 
 class BranchDataSerializer(serializers.ModelSerializer):
-    class Meta:
+    class Meta():
         model = BranchData
         #fields = ['id','firstname', 'lastname', 'email', 'age', 'dateofbirth', 'mobileno']
         fields='__all__'
 
 class CustomerHomeAddressDataSerializer(serializers.ModelSerializer):
-    class Meta:
+    class Meta():
         model = CustomerHomeAddressData
         #fields = ['id','firstname', 'lastname', 'email', 'age', 'dateofbirth', 'mobileno']
         fields='__all__'
