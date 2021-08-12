@@ -9,6 +9,8 @@ https://newapi-rishabh.herokuapp.com/branch/
 
 we can perform GET,POST and DELETE for now, can add PUT also.
 
+For testing purpose Use POSTMAN Application.
+
 please find below links to retieve the data.
 Customer table - http://127.0.0.1:8000/customer/
 Branch table - http://127.0.0.1:8000/branch/
@@ -105,5 +107,7 @@ with open('Branch Details.csv', 'w') as f:
 
 
 we will be getting different files for different tables.
+
+
 
 *NOTE* ---> if any doubt, feel free to Contact (8764124447)
