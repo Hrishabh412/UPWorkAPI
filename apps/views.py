@@ -9,14 +9,14 @@ from apps import serializers
 from rest_framework import generics
 from rest_framework import mixins
 from rest_framework.response import Response
-from rest_framework.authentication import TokenAuthentication, BasicAuthentication
+from rest_framework.authentication import BaseAuthentication, TokenAuthentication, BasicAuthentication
 from rest_framework.permissions import IsAuthenticated
 
 
 class CustomerGenericAPIView(mixins.ListModelMixin,generics.GenericAPIView, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.RetrieveModelMixin, mixins.DestroyModelMixin):
     serializer_class= CustomerSerializer
     queryset=Customer.objects.all()
-    authentication_classes=[TokenAuthentication]
+    authentication_classes=[BaseAuthentication]
     permission_classes=[IsAuthenticated]
     def get(self, request):
         return self.list(request)
