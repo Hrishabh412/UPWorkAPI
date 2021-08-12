@@ -16,7 +16,7 @@ from rest_framework.permissions import IsAuthenticated
 class CustomerGenericAPIView(mixins.ListModelMixin,generics.GenericAPIView, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.RetrieveModelMixin, mixins.DestroyModelMixin):
     serializer_class= CustomerSerializer
     queryset=Customer.objects.all()
-    authentication_classes=[BaseAuthentication]
+    authentication_classes=[BasicAuthentication]
     permission_classes=[IsAuthenticated]
     def get(self, request):
         return self.list(request)
